@@ -13,3 +13,11 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+@import "../scss/colors.scss";
+.home {
+  background-color: $background-color-black;
+  min-height: 100vh;
+  height: 100%;
+}
+</style>

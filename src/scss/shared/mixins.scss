@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 // Import Google fonts
 @mixin google-font($fontName) {
     $font: unquote($fontName);
     @import url(https://fonts.googleapis.com/css?family=#{$fontName});
 }
 
+@mixin space-mono-font() {
+    font-family: 'Space Mono', monospace;
+}
+// @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 // Center 'abs' div
 @mixin abs-center {
     position: absolute;
