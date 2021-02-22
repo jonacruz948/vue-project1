@@ -4,9 +4,9 @@
       <img
         src="../../assets/kusama_animation.gif"
         alt="kusama animation"
-        width="1100"
+        width="900"
       />
-      <div>
+      <div class="typewriter_text">
         <custom-type-writer :words="words" />
       </div>
       <div class="subscribe-action">
@@ -26,7 +26,13 @@ export default {
     CustomTypeWriter,
   },
   setup() {
-    let words = ref(["Expect chaos.", "No promises."]);
+    let words = ref([
+      "Expect chaos.",
+      "No promises.",
+      "Polkadot's wild cousin.",
+      "A canary network.",
+      "A Polkadot experiment",
+    ]);
     return {
       words,
     };
@@ -35,4 +41,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../scss/colors.scss";
+.typewriter_text {
+  color: $white;
+  font-weight: bold;
+  font-family: helvetica;
+  font-size: 30px;
+  margin-bottom: 70px;
+}
 </style>

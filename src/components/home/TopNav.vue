@@ -31,7 +31,7 @@ export default {
 @import "../../scss/shared/mixins.scss";
 #top-nav {
   border-bottom: $border-ash;
-  padding: 15px 140px;
+  padding: 17px 140px;
   position: fixed;
   background: $background-color-black;
   top: 0;

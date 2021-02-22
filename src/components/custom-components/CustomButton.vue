@@ -37,7 +37,7 @@ export default {
   outline: none;
   background: transparent;
   color: $pink;
-  font-size: 0.8em;
+  font-size: 15px;
   cursor: pointer;
   border: 2px solid $pink;
   &:hover {
