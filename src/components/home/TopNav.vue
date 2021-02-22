@@ -6,22 +6,55 @@
       /></router-link>
     </section>
     <section class="action-buttons d-flex align-center">
-      <router-link to="/" class="link"> Guide </router-link>
-      <router-link to="/" class="link"> Claim KSM </router-link>
-      <router-link to="/" class="link"> Blog </router-link>
-      <a class="mdi mdi-twitter link icon" href="https://twitter.com/"> </a>
-      <a class="mdi mdi-discord link icon" href="https://discord.com/"> </a>
-      <a class="mdi mdi-github link icon" href="https://github.com/"> </a>
+      <nav>
+        <ul class="d-flex">
+          <li><router-link to="/" class="link"> Guide </router-link></li>
+          <li><router-link to="/" class="link"> Claim KSM </router-link></li>
+          <li><router-link to="/" class="link"> Blog </router-link></li>
+        </ul>
+      </nav>
+      <div class="social-media">
+        <ul class="d-flex">
+          <li>
+            <a
+              class="mdi mdi-twitter link icon"
+              id="twitter"
+              href="https://twitter.com/"
+            ></a>
+          </li>
+          <li>
+            <a
+              class="mdi mdi-discord link icon"
+              id="discord"
+              href="https://discord.com/"
+            >
+            </a>
+          </li>
+          <li>
+            <a
+              class="mdi mdi-github link icon"
+              id="github"
+              href="https://github.com/"
+            >
+            </a>
+          </li>
+        </ul>
+      </div>
       <custom-button v-text="'Start Building'" class="button" />
     </section>
   </div>
 </template>
 
 <script>
+import { ref } from "vue";
 import CustomButton from "../custom-components/CustomButton.vue";
 export default {
   components: {
     CustomButton
+  },
+  setup() {
+    let image = ref("../../assets/kusama-logo.svg");
+    return { image };
   }
 };
 </script>
@@ -52,6 +85,9 @@ export default {
   }
   .button {
     margin-left: 25px;
+  }
+  li {
+    list-style-type: none;
   }
 }
 </style>

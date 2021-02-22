@@ -23,7 +23,7 @@ import CustomTypeWriter from "@/components/custom-components/CustomTypeWriter.vu
 export default {
   components: {
     CustomButton,
-    CustomTypeWriter,
+    CustomTypeWriter
   },
   setup() {
     let words = ref([
@@ -31,12 +31,12 @@ export default {
       "No promises.",
       "Polkadot's wild cousin.",
       "A canary network.",
-      "A Polkadot experiment",
+      "A Polkadot experiment"
     ]);
     return {
-      words,
+      words
     };
-  },
+  }
 };
 </script>
 

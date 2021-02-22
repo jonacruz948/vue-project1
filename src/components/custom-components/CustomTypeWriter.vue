@@ -1,4 +1,3 @@
-
 <template>
   <span>
     {{ displayText.join("") }}
@@ -11,20 +10,20 @@ export default {
   props: {
     speed: {
       type: Number,
-      default: 100,
+      default: 100
     },
     deleteSpeed: {
       type: Number,
-      default: 30,
+      default: 30
     },
     nextWordInterval: {
       type: Number,
-      default: 1200,
+      default: 1200
     },
     words: {
       type: Array,
-      default: () => [],
-    },
+      default: () => []
+    }
   },
   data() {
     return {
@@ -32,7 +31,7 @@ export default {
       currentWord: "",
       wordIdx: 0,
       timeoutSpeed: null,
-      isWaitingNextWord: false,
+      isWaitingNextWord: false
     };
   },
   mounted() {
@@ -82,9 +81,8 @@ export default {
       }
 
       setTimeout(this.type, this.timeoutSpeed);
-    },
-  },
-
+    }
+  }
 };
 </script>
 
