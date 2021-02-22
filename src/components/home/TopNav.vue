@@ -2,7 +2,7 @@
   <div id="top-nav" class="d-flex align-center justify-space-between">
     <section class="kusama-logo">
       <router-link to="/"
-        ><img src="../../assets/kusama-logo.svg" alt="kusama-logo" width="120"
+        ><img :src="image" alt="kusama-logo" width="120"
       /></router-link>
     </section>
     <section class="action-buttons d-flex align-center">
@@ -48,12 +48,13 @@
 <script>
 import { ref } from "vue";
 import CustomButton from "../custom-components/CustomButton.vue";
+import img from "../../assets/kusama-logo.svg";
 export default {
   components: {
     CustomButton
   },
   setup() {
-    let image = ref("../../assets/kusama-logo.svg");
+    let image = ref(img);
     return { image };
   }
 };
