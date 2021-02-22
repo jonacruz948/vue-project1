@@ -18,11 +18,11 @@
 </template>
 
 <script>
-import CustomButton from "../custom-components/CustomButton.vue"
+import CustomButton from "../custom-components/CustomButton.vue";
 export default {
-    components: {
-        CustomButton
-    }
+  components: {
+    CustomButton
+  }
 };
 </script>
 
@@ -32,6 +32,11 @@ export default {
 #top-nav {
   border-bottom: $border-ash;
   padding: 15px 140px;
+  position: fixed;
+  background: $background-color-black;
+  top: 0;
+  right: 0;
+  left: 0;
   .link {
     @include space-mono-font();
     color: $text-ash;
@@ -42,11 +47,11 @@ export default {
       color: $hover-text-color;
     }
   }
-  .icon{
-      font-size: 1.3em;
+  .icon {
+    font-size: 1.3em;
   }
   .button {
-      margin-left: 25px;
+    margin-left: 25px;
   }
 }
 </style>
