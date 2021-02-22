@@ -1,0 +1,9 @@
+// Dynamic text (em)
+@function em($pixel, $context: 16px) {
+    @return ($pixel / $context) * 1em;
+}
+
+// Grid column width
+@function col-width($columns, $page-width: 100%, $gap: 1%) {
+    @return ($page-width - $gap*($columns - 1)) / $columns;
+}
