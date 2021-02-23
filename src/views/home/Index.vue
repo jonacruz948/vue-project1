@@ -1,11 +1,7 @@
 <template>
-  <div class="index">
+  <div class="index container">
     <section class="hero-ui">
-      <img
-        src="../../assets/kusama_animation.gif"
-        alt="kusama animation"
-        width="900"
-      />
+      <img src="../../assets/kusama_animation.gif" alt="kusama animation" />
       <div class="typewriter_text">
         <custom-type-writer :words="words" />
       </div>
@@ -64,5 +60,9 @@ export default {
 }
 .hero-ui {
   height: 100vh;
+  img {
+    width: 100%;
+    max-width: 900px;
+  }
 }
 </style>

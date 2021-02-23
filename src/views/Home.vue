@@ -19,6 +19,7 @@ export default {
 .home {
   background-color: $background-color-black;
   // min-height: 100vh;
+  padding-top: 5rem;
   height: 100%;
 }
 </style>
