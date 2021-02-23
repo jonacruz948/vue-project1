@@ -10,11 +10,15 @@
         <ul class="d-flex">
           <li><router-link to="/" class="link"> Home </router-link></li>
           <li><router-link to="/" class="link"> Portfolio </router-link></li>
+<<<<<<< HEAD
+=======
+          <li><router-link to="/" class="link"> Contact </router-link></li>
+>>>>>>> main
         </ul>
       </nav>
       <div class="social-media">
         <ul class="d-flex">
-          <li>
+           <li>
             <a
               class="mdi mdi-github link icon"
               id="github"
@@ -30,6 +34,7 @@
             >
             </a>
           </li>
+         
         </ul>
       </div>
       <custom-button v-text="'Contact'" class="button" />
