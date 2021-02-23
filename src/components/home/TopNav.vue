@@ -10,7 +10,6 @@
         <ul class="d-flex">
           <li><router-link to="/" class="link"> Home </router-link></li>
           <li><router-link to="/" class="link"> Portfolio </router-link></li>
-
         </ul>
       </nav>
       <div class="social-media">
