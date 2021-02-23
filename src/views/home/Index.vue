@@ -77,15 +77,18 @@ export default {
   }
 }
 .hero-ui {
-  height: calc(100vh - 4rem);
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   @include phone-screen {
-    height: calc(100vh - 6rem);
+    min-height: calc(100vh - 6rem);
+    padding-bottom: 6rem;
   }
   .hero-image {
     margin-bottom: 35px;
-    @include phone-screen {
-      padding-top: 20px;
-    }
   }
   img {
     width: 100%;
