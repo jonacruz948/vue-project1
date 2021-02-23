@@ -17,17 +17,24 @@
         <ul class="d-flex">
            <li>
             <a
-              class="mdi mdi-github link icon"
-              id="github"
-              href="https://github.com/"
+              class="mdi mdi-twitter link icon"
+              id="twitter"
+              href="https://twitter.com/"
+            ></a>
+          </li>
+          <li>
+            <a
+              class="mdi mdi-discord link icon"
+              id="discord"
+              href="https://discord.com/"
             >
             </a>
           </li>
           <li>
             <a
-              class="mdi mdi-linkedin link icon"
-              id="linkedin"
-              href="https://linkedin.com/"
+              class="mdi mdi-github link icon"
+              id="github"
+              href="https://github.com/"
             >
             </a>
           </li>
