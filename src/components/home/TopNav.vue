@@ -8,14 +8,14 @@
     <section class="action-buttons d-flex align-center">
       <nav>
         <ul class="d-flex">
-          <li><router-link to="/" class="link"> Guide </router-link></li>
-          <li><router-link to="/" class="link"> Claim KSM </router-link></li>
-          <li><router-link to="/" class="link"> Blog </router-link></li>
+          <li><router-link to="/" class="link"> Home </router-link></li>
+          <li><router-link to="/" class="link"> Portfolio </router-link></li>
+          <li><router-link to="/" class="link"> Contact </router-link></li>
         </ul>
       </nav>
       <div class="social-media">
         <ul class="d-flex">
-          <li>
+           <li>
             <a
               class="mdi mdi-twitter link icon"
               id="twitter"
@@ -38,6 +38,7 @@
             >
             </a>
           </li>
+         
         </ul>
       </div>
       <custom-button v-text="'Start Building'" class="button" />
