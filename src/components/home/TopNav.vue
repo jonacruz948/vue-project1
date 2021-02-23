@@ -8,12 +8,28 @@
     <section class="action-buttons d-flex align-center">
       <nav>
         <ul class="d-flex">
-          <li><router-link to="/" class="link"> Home </router-link></li>
-          <li><router-link to="/" class="link"> Portfolio </router-link></li>
+          <li><router-link to="/" class="link"> Guide </router-link></li>
+          <li><router-link to="/" class="link"> Claim KSM </router-link></li>
+          <li><router-link to="/" class="link"> Blog </router-link></li>
         </ul>
       </nav>
       <div class="social-media">
         <ul class="d-flex">
+          <li>
+            <a
+              class="mdi mdi-twitter link icon"
+              id="twitter"
+              href="https://twitter.com/"
+            ></a>
+          </li>
+          <li>
+            <a
+              class="mdi mdi-discord link icon"
+              id="discord"
+              href="https://discord.com/"
+            >
+            </a>
+          </li>
           <li>
             <a
               class="mdi mdi-github link icon"
@@ -22,17 +38,9 @@
             >
             </a>
           </li>
-          <li>
-            <a
-              class="mdi mdi-linkedin link icon"
-              id="linkedin"
-              href="https://linkedin.com/"
-            >
-            </a>
-          </li>
         </ul>
       </div>
-      <custom-button v-text="'Contact'" class="button" />
+      <custom-button v-text="'Start Building'" class="button" />
     </section>
   </div>
 </template>
