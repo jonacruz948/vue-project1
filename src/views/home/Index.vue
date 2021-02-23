@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <section>
+  <div class="index">
+    <section class="hero-ui">
       <img
         src="../../assets/kusama_animation.gif"
         alt="kusama animation"
@@ -13,6 +13,9 @@
         <custom-button v-text="'Subscribe for Updates'" class="button" />
       </div>
     </section>
+    <section class="portfolio-ui">
+      <portfolio />
+    </section>
   </div>
 </template>
 
@@ -20,10 +23,12 @@
 import { ref } from "vue";
 import CustomButton from "@/components/custom-components/CustomButton.vue";
 import CustomTypeWriter from "@/components/custom-components/CustomTypeWriter.vue";
+import Portfolio from "../../components/home/Portfolio.vue";
 export default {
   components: {
     CustomButton,
-    CustomTypeWriter
+    CustomTypeWriter,
+    Portfolio
   },
   setup() {
     let words = ref([
@@ -42,11 +47,19 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../scss/colors.scss";
+.index {
+  background-color: $background-color-black;
+}
 .typewriter_text {
   color: $white;
   font-weight: bold;
   font-family: helvetica;
   font-size: 30px;
   margin-bottom: 70px;
+}
+.hero-ui {
+  height: 100vh;
+}
+.portfolio-ui {
 }
 </style>
