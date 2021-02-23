@@ -1,5 +1,5 @@
 <template>
-  <div class="index">
+  <div class="index container">
     <section class="hero-ui">
       <img
         src="../../assets/kusama_animation.gif"
@@ -107,6 +107,31 @@ export default {
   }
 }
 .hero-ui {
-  height: 100vh;
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  @include phone-screen {
+    min-height: calc(100vh - 6rem);
+    padding-bottom: 6rem;
+  }
+  .hero-image {
+    margin-bottom: 35px;
+  }
+  img {
+    width: 100%;
+    max-width: 900px;
+  }
+
+  .subscribe-action {
+    .button {
+      @include phone-screen {
+        padding: 6px 16px;
+        font-size: 0.9em;
+      }
+    }
+  }
 }
 </style>
