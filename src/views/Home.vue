@@ -18,7 +18,7 @@ export default {
 @import "../scss/colors.scss";
 .home {
   background-color: $background-color-black;
-  min-height: 100vh;
+  // min-height: 100vh;
   height: 100%;
 }
 </style>
