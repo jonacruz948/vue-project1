@@ -6,11 +6,14 @@
         alt="kusama animation"
         width="900"
       />
-      <div class="typewriter_text">
+      <div class="typewriter_text pb-5">
         <custom-type-writer :words="words" />
       </div>
       <div class="subscribe-action">
-        <custom-button v-text="'Subscribe for Updates'" class="button" />
+        <custom-button
+          v-text="'Subscribe for Updates'"
+          class="button rounded-0"
+        />
       </div>
     </section>
     <section class="portfolio-ui">
@@ -52,6 +55,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../scss/colors.scss";
+@import "../../scss/shared/mixins.scss";
 .index {
   background-color: $background-color-black;
 }
@@ -60,7 +64,47 @@ export default {
   font-weight: bold;
   font-family: helvetica;
   font-size: 30px;
-  margin-bottom: 70px;
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  transform: translate(-50%);
+  white-space: nowrap;
+  @include phone-screen {
+    bottom: 20px;
+    font-size: 1.4em;
+  }
+  @include tablet-screen {
+    bottom: 25px;
+    font-size: 1.5em;
+  }
+}
+.hero-ui {
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  @include phone-screen {
+    min-height: calc(100vh - 6rem);
+    padding-bottom: 6rem;
+  }
+  .hero-image {
+    margin-bottom: 35px;
+  }
+  img {
+    width: 100%;
+    max-width: 900px;
+  }
+
+  .subscribe-action {
+    .button {
+      @include phone-screen {
+        padding: 6px 16px;
+        font-size: 0.9em;
+      }
+    }
+  }
 }
 .hero-ui {
   height: 100vh;
