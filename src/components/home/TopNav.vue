@@ -2,27 +2,53 @@
   <div id="top-nav" class="d-flex align-center justify-space-between">
     <section class="kusama-logo">
       <router-link to="/"
-        ><img src="../../assets/kusama-logo.svg" alt="kusama-logo" width="120"
+        ><img :src="image" alt="kusama-logo" width="120"
       /></router-link>
     </section>
     <section class="action-buttons d-flex align-center">
-      <router-link to="/" class="link"> Guide </router-link>
-      <router-link to="/" class="link"> Claim KSM </router-link>
-      <router-link to="/" class="link"> Blog </router-link>
-      <a class="mdi mdi-twitter link icon" href="https://twitter.com/"> </a>
-      <a class="mdi mdi-discord link icon" href="https://discord.com/"> </a>
-      <a class="mdi mdi-github link icon" href="https://github.com/"> </a>
-      <custom-button v-text="'Start Building'" class="button" />
+      <nav>
+        <ul class="d-flex">
+          <li><router-link to="/" class="link"> Home </router-link></li>
+          <li><router-link to="/" class="link"> Portfolio </router-link></li>
+        </ul>
+      </nav>
+      <div class="social-media">
+        <ul class="d-flex">
+          <li>
+            <a
+              class="mdi mdi-github link icon"
+              id="github"
+              href="https://github.com/"
+            >
+            </a>
+          </li>
+          <li>
+            <a
+              class="mdi mdi-linkedin link icon"
+              id="linkedin"
+              href="https://linkedin.com/"
+            >
+            </a>
+          </li>
+        </ul>
+      </div>
+      <custom-button v-text="'Contact'" class="button" />
     </section>
   </div>
 </template>
 
 <script>
-import CustomButton from "../custom-components/CustomButton.vue"
+import { ref } from "vue";
+import CustomButton from "../custom-components/CustomButton.vue";
+import img from "../../assets/kusama-logo.svg";
 export default {
-    components: {
-        CustomButton
-    }
+  components: {
+    CustomButton
+  },
+  setup() {
+    let image = ref(img);
+    return { image };
+  }
 };
 </script>
 
@@ -31,7 +57,12 @@ export default {
 @import "../../scss/shared/mixins.scss";
 #top-nav {
   border-bottom: $border-ash;
-  padding: 15px 140px;
+  padding: 17px 140px;
+  position: fixed;
+  background: $background-color-black;
+  top: 0;
+  right: 0;
+  left: 0;
   .link {
     @include space-mono-font();
     color: $text-ash;
@@ -42,11 +73,14 @@ export default {
       color: $hover-text-color;
     }
   }
-  .icon{
-      font-size: 1.3em;
+  .icon {
+    font-size: 1.3em;
   }
   .button {
-      margin-left: 25px;
+    margin-left: 25px;
+  }
+  li {
+    list-style-type: none;
   }
 }
 </style>

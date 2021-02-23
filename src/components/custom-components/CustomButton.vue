@@ -3,7 +3,7 @@
     id="btn"
     :class="{
       btn: true,
-      'btn-disabled': loading || disabled,
+      'btn-disabled': loading || disabled
     }"
     :disabled="loading || disabled"
   >
@@ -33,11 +33,11 @@ export default {
 @import "../../scss/colors.scss";
 
 .btn {
-  padding: 10px 15px;
+  padding: 10px 23px;
   outline: none;
   background: transparent;
   color: $pink;
-  font-size: 0.8em;
+  font-size: 15px;
   cursor: pointer;
   border: 2px solid $pink;
   &:hover {
