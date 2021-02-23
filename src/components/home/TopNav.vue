@@ -43,27 +43,9 @@
                 Portfolio
               </router-link>
             </li>
-            <li>
-              <router-link to="/" class="link nav-item"> Contact </router-link>
-            </li>
           </ul>
           <div class="social-media">
             <ul class="d-flex mb-0 pl-0">
-              <li>
-                <a
-                  class="mdi mdi-twitter link icon"
-                  id="twitter"
-                  href="https://twitter.com/"
-                ></a>
-              </li>
-              <li>
-                <a
-                  class="mdi mdi-discord link icon"
-                  id="discord"
-                  href="https://discord.com/"
-                >
-                </a>
-              </li>
               <li>
                 <a
                   class="mdi mdi-github link icon"
@@ -72,10 +54,18 @@
                 >
                 </a>
               </li>
+              <li>
+                <a
+                  class="mdi mdi-linkedin link icon"
+                  id="linkedin"
+                  href="https://linkedin.com/"
+                >
+                </a>
+              </li>
             </ul>
           </div>
         </div>
-        <custom-button v-text="'Start Building'" class="button ml-lg-3" />
+        <custom-button v-text="'Contact'" class="button ml-lg-3 mr-1" />
       </section>
     </section>
   </div>
