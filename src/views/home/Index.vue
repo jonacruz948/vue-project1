@@ -60,6 +60,4 @@ export default {
 .hero-ui {
   height: 100vh;
 }
-.portfolio-ui {
-}
 </style>
