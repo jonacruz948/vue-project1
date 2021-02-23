@@ -68,8 +68,12 @@ export default {
   transform: translate(-50%);
   white-space: nowrap;
   @include phone-screen {
-    bottom: 25px;
+    bottom: 20px;
     font-size: 1.4em;
+  }
+  @include tablet-screen {
+    bottom: 25px;
+    font-size: 1.5em;
   }
 }
 .hero-ui {
