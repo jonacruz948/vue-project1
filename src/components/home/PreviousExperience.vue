@@ -71,6 +71,9 @@ export default {
 @import "../../scss/shared/mixins.scss";
 @import "../../scss/colors.scss";
 .icon-wrapper {
+  &:hover {
+    text-decoration: none;
+  }
   .icon {
     height: 3em;
     width: 3em;
