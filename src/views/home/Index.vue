@@ -19,8 +19,11 @@
     <section class="portfolio-ui">
       <portfolio />
     </section>
-    <section class="previous-experience">
+    <section class="previous-experience py-5">
       <previous-experience />
+    </section>
+    <section class="testimonials-ui">
+      <testimonial />
     </section>
   </div>
 </template>
@@ -31,12 +34,14 @@ import CustomButton from "@/components/custom-components/CustomButton.vue";
 import CustomTypeWriter from "@/components/custom-components/CustomTypeWriter.vue";
 import Portfolio from "../../components/home/Portfolio.vue";
 import PreviousExperience from "../../components/home/PreviousExperience.vue";
+import Testimonial from "../../components/home/Testimonial.vue";
 export default {
   components: {
     CustomButton,
     CustomTypeWriter,
     Portfolio,
-    PreviousExperience
+    PreviousExperience,
+    Testimonial
   },
   setup() {
     let words = ref([
