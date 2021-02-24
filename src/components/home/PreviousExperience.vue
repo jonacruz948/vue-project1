@@ -4,85 +4,62 @@
     <div
       class="d-flex flex-wrap justify-content-start justify-content-lg-between pt-5 pb-5"
     >
-      <router-link
-        class="icon-wrapper"
-        v-for="item in experiances"
-        :key="item.id"
-        to="/"
-      >
-        <img class="icon" :src="getIcon(item.image)" alt="" />
-        <div class="text">{{ item.title }}</div>
-      </router-link>
+      <icon-box v-for="item in experiances" :key="item.id" :icon="item" />
     </div>
   </div>
 </template>
 
 <script>
+import { ref } from "vue";
 import TitleHeader from "./TitleHeader";
+import IconBox from "./IconBox";
 export default {
-  data() {
+  setup() {
+    const experiances = ref([
+      {
+        id: 1,
+        title: "Polkadot",
+        path: "/",
+        image: "polkadot.png"
+      },
+      {
+        id: 2,
+        title: "Acala",
+        path: "/",
+        image: "acala.png"
+      },
+      {
+        id: 3,
+        title: "Chainlink",
+        path: "/",
+        image: "chainlink.png"
+      },
+      {
+        id: 4,
+        title: "Moonbeam",
+        path: "/",
+        image: "moonbeam.png"
+      },
+      {
+        id: 5,
+        title: "Phala",
+        path: "/",
+        image: "phala.svg"
+      },
+      {
+        id: 1,
+        title: "Edgeware",
+        path: "/",
+        image: "edgeware.svg"
+      }
+    ]);
     return {
-      experiances: [
-        {
-          id: 1,
-          title: "Polkadot",
-          image: "polkadot.png"
-        },
-        {
-          id: 2,
-          title: "Acala",
-          image: "acala.png"
-        },
-        {
-          id: 3,
-          title: "Chainlink",
-          image: "chainlink.png"
-        },
-        {
-          id: 4,
-          title: "Moonbeam",
-          image: "moonbeam.png"
-        },
-        {
-          id: 5,
-          title: "Phala",
-          image: "phala.svg"
-        },
-        {
-          id: 1,
-          title: "Edgeware",
-          image: "edgeware.svg"
-        }
-      ]
+      experiances
     };
   },
-  methods: {
-    getIcon(name) {
-      return require("@/assets/icons/" + name);
-    }
-  },
   components: {
-    TitleHeader
+    TitleHeader,
+    IconBox
   }
 };
 </script>
-
-<style lang="scss" scoped>
-@import "../../scss/shared/mixins.scss";
-@import "../../scss/colors.scss";
-.icon-wrapper {
-  &:hover {
-    text-decoration: none;
-  }
-  .icon {
-    height: 3em;
-    width: 3em;
-    margin: 1em;
-  }
-
-  .text {
-    color: $white;
-    @include space-mono-font();
-  }
-}
-</style>
