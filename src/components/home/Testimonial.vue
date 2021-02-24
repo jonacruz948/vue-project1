@@ -6,19 +6,21 @@
         <li
           v-for="testimonial in testimonials"
           :key="testimonial.id"
-          class="linkedin-wrapper col-sm-12 col-md-6 col-lg-4 mt-4 px-4 mt-lg-0 mx-auto"
+          class="linkedin-wrapper col-sm-12 col-md-6 col-lg-4 mt-4 px-3 mt-lg-0 mx-auto"
         >
-          <img
-            class="linkedin-avatar"
-            src="../../assets/profile-pic.jpg"
-            alt=""
-          />
-          <p class="linkedin-member-message mt-1">
-            {{ testimonial.message }}
-          </p>
-          <div class="divider mt-5 mb-4"></div>
-          <p class="linkedin-member mb-1">{{ testimonial.name }}</p>
-          <p class="linkedin-member-title">{{ testimonial.title }}</p>
+          <div class="p-4 linkedin-wrapper--bordered">
+            <img
+              class="linkedin-avatar"
+              src="../../assets/profile-pic.jpg"
+              alt=""
+            />
+            <p class="linkedin-member-message mt-1">
+              {{ testimonial.message }}
+            </p>
+            <div class="divider mt-5 mb-4"></div>
+            <p class="linkedin-member mb-1">{{ testimonial.name }}</p>
+            <p class="linkedin-member-title">{{ testimonial.title }}</p>
+          </div>
         </li>
       </ul>
     </div>
@@ -75,6 +77,12 @@ export default {
   .linkedin-wrapper {
     @include space-mono-font();
     color: $white;
+
+    &--bordered {
+      border: $border-ash;
+      border-radius: 5px;
+    }
+
     .linkedin-avatar {
       height: 7em;
       width: 7em;
