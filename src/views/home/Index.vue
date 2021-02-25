@@ -26,9 +26,6 @@
     <section class="testimonials-ui">
       <testimonial />
     </section>
-    <section class="previous-experience py-5">
-      <previous-experience />
-    </section>
     <section class="newsletter-ui py-5">
       <newsletter />
     </section>
@@ -45,7 +42,7 @@ import PreviousExperience from "../../components/home/PreviousExperience.vue";
 import Service from "../../components/home/Service.vue";
 import Testimonial from "../../components/home/Testimonial.vue";
 import Newsletter from "../../components/home/Newsletter.vue";
-import HomeFooter from '../../components/home/HomeFooter.vue';
+import HomeFooter from "../../components/home/HomeFooter.vue";
 export default {
   components: {
     CustomButton,
