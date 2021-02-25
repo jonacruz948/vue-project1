@@ -20,9 +20,19 @@
     <section class="previous-experience py-5">
       <previous-experience />
     </section>
+    <section class="services-ui">
+      <service />
+    </section>
     <section class="testimonials-ui">
       <testimonial />
     </section>
+    <section class="previous-experience py-5">
+      <previous-experience />
+    </section>
+    <section class="newsletter-ui py-5">
+      <newsletter />
+    </section>
+    <home-footer />
   </div>
 </template>
 
@@ -32,14 +42,20 @@ import CustomButton from "@/components/custom-components/CustomButton.vue";
 import CustomTypeWriter from "@/components/custom-components/CustomTypeWriter.vue";
 import Portfolio from "../../components/home/Portfolio.vue";
 import PreviousExperience from "../../components/home/PreviousExperience.vue";
+import Service from "../../components/home/Service.vue";
 import Testimonial from "../../components/home/Testimonial.vue";
+import Newsletter from "../../components/home/Newsletter.vue";
+import HomeFooter from '../../components/home/HomeFooter.vue';
 export default {
   components: {
     CustomButton,
     CustomTypeWriter,
     Portfolio,
     PreviousExperience,
-    Testimonial
+    Service,
+    Testimonial,
+    Newsletter,
+    HomeFooter
   },
   setup() {
     let words = ref([

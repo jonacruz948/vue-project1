@@ -1,10 +1,14 @@
 <template>
   <div class="mt-5">
     <title-header class="mb-4" :title="'Join the Kusama Ecosystem'" />
-    <div
-      class="d-flex flex-wrap justify-content-start justify-content-lg-between pt-5 pb-5"
-    >
-      <icon-box v-for="item in experiances" :key="item.id" :icon="item" />
+    <div class="row pt-5 pb-5">
+      <icon-box
+        class="col-4 col-md-2"
+        :class="index === 6 ? 'offset-md-1' : ''"
+        v-for="(item, index) in experiances"
+        :key="item.id"
+        :icon="item"
+      />
     </div>
   </div>
 </template>
@@ -47,7 +51,7 @@ export default {
         image: "phala.svg"
       },
       {
-        id: 1,
+        id: 6,
         title: "Edgeware",
         path: "/",
         image: "edgeware.svg"
