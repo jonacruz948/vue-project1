@@ -1,16 +1,13 @@
 <template>
   <div class="portfolio">
     <title-header :title="'Take Flight'" class="mb-5" />
-    <div class="row col-lg-8 col-md-12 col-sm-12 ">
+    <div class="row col-lg-10">
       <div
-        class="col-md-6 col-sm-12 col-lg-6"
+        class="col-md-6 col-sm-12 col-lg-4"
         v-for="(card, index) in cards"
         :key="index"
       >
         <double-bordered-card :title="card.title" :routes="card.routes" />
-      </div>
-      <div class="col-12">
-        <double-bordered-card class="double-bordered-card" />
       </div>
     </div>
   </div>
@@ -24,6 +21,19 @@ export default {
   components: { DoubleBorderedCard, TitleHeader },
   setup() {
     const cards = ref([
+      {
+        title: "Build",
+        routes: [
+          {
+            title: "Kusama Docs",
+            link: ""
+          },
+          {
+            title: "Learn Substrate",
+            link: ""
+          }
+        ]
+      },
       {
         title: "Validate",
         routes: [
@@ -73,9 +83,5 @@ export default {
 }
 .take-flight {
   width: 100%;
-}
-.double-bordered-card {
-  width: 100%;
-  height: 40%;
 }
 </style>
