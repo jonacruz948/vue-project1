@@ -16,20 +16,11 @@
         </li>
       </ul>
     </div>
-    <div class="col-sm-12">
-      <div class="service-action mt-md-5 mt-2">
-        <custom-button
-          v-text="'Why Build a Parachain'"
-          class="button rounded-0"
-        />
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
 import { ref } from "vue";
-import CustomButton from "@/components/custom-components/CustomButton";
 export default {
   setup() {
     const services = ref([
@@ -44,9 +35,6 @@ export default {
     return {
       services
     };
-  },
-  components: {
-    CustomButton
   }
 };
 </script>
