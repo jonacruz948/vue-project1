@@ -36,7 +36,7 @@
         <div class="d-flex ml-auto py-2">
           <ul class="d-flex flex-row navbar-nav">
             <li>
-              <router-link to="/" class="link nav-item"> Home </router-link>
+              <router-link to="/" class="link nav-item"> Home</router-link>
             </li>
             <li>
               <router-link to="/" class="link nav-item">
@@ -65,7 +65,9 @@
             </ul>
           </div>
         </div>
-        <custom-button v-text="'Contact'" class="button ml-lg-3 mr-1" />
+        <router-link :to="{ name: 'Contact' }">
+          <custom-button v-text="'Contact'" class="button ml-lg-3 mr-1" />
+        </router-link>
       </section>
     </section>
   </div>
@@ -75,6 +77,7 @@
 import { ref } from "vue";
 import CustomButton from "../custom-components/CustomButton.vue";
 import img from "../../assets/kusama-logo.svg";
+
 export default {
   components: {
     CustomButton
@@ -89,22 +92,27 @@ export default {
 <style lang="scss" scoped>
 @import "../../scss/colors.scss";
 @import "../../scss/shared/mixins.scss";
+
 #top-nav {
   border-bottom: $border-ash;
   background: $background-color-black;
+
   .link {
     @include space-mono-font();
     color: $text-ash;
     text-decoration: none;
     margin: 0 10px;
     font-size: 1.1em;
+
     &:hover {
       color: $hover-text-color;
     }
   }
+
   .icon {
     font-size: 1.3em;
   }
+
   li {
     list-style-type: none;
   }
