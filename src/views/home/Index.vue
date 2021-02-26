@@ -26,7 +26,10 @@
     <section class="testimonials-ui">
       <testimonial />
     </section>
-    <section class="newsletter-ui py-5">
+    <section class="features-ui">
+      <features />
+    </section>
+    <section class="newsletter-ui py-3 py-lg-5 mt-lg-5">
       <newsletter />
     </section>
     <home-footer />
@@ -41,6 +44,7 @@ import Portfolio from "../../components/home/Portfolio.vue";
 import PreviousExperience from "../../components/home/PreviousExperience.vue";
 import Service from "../../components/home/Service.vue";
 import Testimonial from "../../components/home/Testimonial.vue";
+import Features from "../../components/home/Features.vue";
 import Newsletter from "../../components/home/Newsletter.vue";
 import HomeFooter from "../../components/home/HomeFooter.vue";
 export default {
@@ -51,6 +55,7 @@ export default {
     PreviousExperience,
     Service,
     Testimonial,
+    Features,
     Newsletter,
     HomeFooter
   },
